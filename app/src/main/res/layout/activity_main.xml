@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="343dp"
+        android:layout_height="486dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="250dp"
+        app:layout_constraintBottom_toTopOf="@+id/angry_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.495"
+        app:srcCompat="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="281dp"
+        android:layout_height="246dp"
+        android:layout_marginEnd="370dp"
+        android:layout_marginBottom="140dp"
+        android:text="Lorem ipsum dolor sit amet consectetur adipiscing elit. Ut vitae massa dapibus, rutrum nunc et, tristique nisl. Duis suscipit leo nulla, et varius magna finibus in. Suspendisse hendrerit rhouncus lacinia."
+        android:textAlignment="center"
+        android:textColor="#5E5E61"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/angry_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <Button
+        android:id="@+id/angry_btn"
+
+        android:layout_width="270dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="70dp"
+
+        android:layout_marginEnd="70dp"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/button_experimente"
+        android:onClick="proximaTela"
+        android:shadowColor="#A8A8A8"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="5"
+        android:text="Experimente!"
+        android:textAllCaps="false"
+        android:textColor="#FF3C36"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
