@@ -5,13 +5,17 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import static android.provider.ContactsContract.Intents.Insert.EMAIL;
+
 public class criaBanco extends SQLiteOpenHelper {
     private static final String NOME_BANCO="banco.db";
     public static final String TABELA="usuarios";
     public static final String ID="id";
     public static final String NOME="nome";
-    public static final String MAIL="email";
+    public static final String EMAIL="email";
     public static final String SENHA="senha";
+    public static final String SENHACONFERE="senhaconfere";
+
     private static final int VERSAO=2;
 
     public criaBanco(Context context){
@@ -23,8 +27,9 @@ public class criaBanco extends SQLiteOpenHelper {
         String sql= "CREATE TABLE "+TABELA+"("
                 +ID+"integer primary key autoincrement,"
                 +NOME+"text,"
-                +MAIL+"text,"
-                +SENHA+"text"
+                +EMAIL+"text,"
+                +SENHA+"text,"
+                +SENHACONFERE+"text"
                 +")";
         db.execSQL(sql);
     }

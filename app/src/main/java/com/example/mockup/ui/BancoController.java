@@ -13,15 +13,16 @@ public class BancoController {
         banco = new criaBanco(context);
     }
 
-    public String insereDado(String nome, String email, String senha) {
+    public String insereDado(String nome, String email, String senha, String senhaconfere) {
         ContentValues valores;
         long resultado;
 
         db = banco.getWritableDatabase();
         valores = new ContentValues();
         valores.put(criaBanco.NOME, nome);
-        valores.put(criaBanco.MAIL, email);
+        valores.put(criaBanco.EMAIL, email);
         valores.put(criaBanco.SENHA, senha);
+        valores.put(criaBanco.SENHACONFERE, senhaconfere);
 
         resultado = db.insert(criaBanco.TABELA, null, valores);
         db.close();
