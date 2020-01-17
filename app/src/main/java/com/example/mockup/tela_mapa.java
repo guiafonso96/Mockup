@@ -12,8 +12,6 @@ public class tela_mapa extends AppCompatActivity {
     private DrawerLayout drawer;
 
 
-
-
         @Override
         protected void onCreate (Bundle savedInstanceState){
 
