@@ -97,12 +97,12 @@
         android:inputType="textPassword"
         android:textColor="#FFFFFF"
         android:textColorHint="#FFFFFFFF"
-        app:layout_constraintBottom_toTopOf="@+id/button_cadatrar"
+        app:layout_constraintBottom_toTopOf="@+id/buttoncadatrar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button_cadatrar"
+        android:id="@+id/buttoncadatrar"
 
         android:layout_width="270dp"
         android:layout_height="60dp"

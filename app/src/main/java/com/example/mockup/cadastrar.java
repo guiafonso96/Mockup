@@ -9,46 +9,73 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.mockup.BancoController;
+import com.example.mockup.R;
+
 public class cadastrar extends AppCompatActivity {
+
+
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastrar);
-        Button botao= (Button) findViewById(R.id.button_cadatrar);
+        Button botao = (Button) findViewById(R.id.buttoncadatrar);
 
         botao.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                EditText Nome = findViewById(R.id.nome);
-                EditText email = findViewById(R.id.email);
-                EditText Senha = findViewById(R.id.senha);
-                EditText repitasenha = findViewById(R.id.senhaconfere);
+                BancoController crud = new BancoController(getBaseContext());
+                EditText nome = (EditText)findViewById(R.id.nome);
+                EditText email = (EditText)findViewById((R.id.email));
+                EditText senha = (EditText)findViewById(R.id.senha);
+                EditText senhaConf = (EditText)findViewById(R.id.senhaconfere);
 
-                String nomeString = Nome.getText().toString();
+
+                String nomeString = nome.getText().toString();
                 String emailString = email.getText().toString();
-                String SenhaString = Senha.getText().toString();
-                String repitasenhaString = repitasenha.getText().toString();
+                String senhaString = senha.getText().toString();
+                String senhaConfString = senhaConf.getText().toString();
 
-                if (nomeString.isEmpty() || emailString.isEmpty() || SenhaString.isEmpty() || repitasenhaString.isEmpty()) {
-                    String resultado = "preeencha todos os campos";
+                if(nomeString.isEmpty() || emailString.isEmpty() || senhaString.isEmpty() || senhaConfString.isEmpty()){
+
+                    String resultado = "preencha todos os campos";
 
                     Toast.makeText(getApplicationContext(), resultado, Toast.LENGTH_LONG).show();
 
-                } else {
-                    if (SenhaString.equals(repitasenhaString)) {
-                        String resultado = "Cadastrou";
-                        Toast toast = Toast.makeText(getApplicationContext(), resultado, Toast.LENGTH_SHORT);
-                        toast.setGravity(Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL, 0, 50);
+                }else{
+                    if(senhaString.equals(senhaConfString)){
+                        //String resultado = "cadastrou";
+                        String resultado = crud.insereDado(nomeString,emailString,senhaString);
+                        Toast toast= Toast.makeText(getApplicationContext(),
+                                resultado, Toast.LENGTH_SHORT);
+                        toast.setGravity(Gravity.TOP|Gravity.CENTER_HORIZONTAL, 0, 0);
                         toast.show();
-                    } else {
+
+                    }else{
                         String resultado = "as senhas não conferem";
+
                         Toast.makeText(getApplicationContext(), resultado, Toast.LENGTH_LONG).show();
                     }
+
                 }
+
+
+
+
+
+
+
+
             }
         });
+
+
+
+
     }
 }
-

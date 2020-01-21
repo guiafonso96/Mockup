@@ -1,4 +1,4 @@
-package com.example.mockup.ui;
+package com.example.mockup;
 
 
 import android.content.Context;
@@ -25,17 +25,17 @@ public class criaBanco extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db){
         String sql= "CREATE TABLE "+TABELA+"("
-                +ID+"integer primary key autoincrement,"
-                +NOME+"text,"
-                +EMAIL+"text,"
-                +SENHA+"text,"
-                +SENHACONFERE+"text"
+                +ID+" integer primary key autoincrement,"
+                +NOME+" text,"
+                +EMAIL+" text,"
+                +SENHA+" text,"
+                +SENHACONFERE+" text"
                 +")";
         db.execSQL(sql);
     }
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion){
-        db.execSQL("DROP TABLE [IF EXISTS]."+TABELA);
+        db.execSQL("DROP TABLE IF EXISTS usuarios");
         onCreate(db);
     }
 }
