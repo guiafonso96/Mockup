@@ -17,8 +17,8 @@ public class Login extends AppCompatActivity {
         setContentView(R.layout.activity_login);
     }
     public void login(View view) {
-        EditText email = findViewById(R.id.email);
-        EditText senha = findViewById(R.id.senha);
+        EditText email = findViewById(R.id.campoEmail);
+        EditText senha = findViewById(R.id.campoSenha);
         String strEmail = email.getText().toString();
         String strSenha = senha.getText().toString();
         boolean erro = false;
@@ -34,7 +34,7 @@ public class Login extends AppCompatActivity {
 
                 if (strEmail.equals(resEmail) && strSenha.equals(resSenha)) {
                     Toast.makeText(getApplicationContext(), "Seja bem-vindo.", Toast.LENGTH_LONG).show();
-                    Intent intent = new Intent(this, tela_mapa.class);
+                    Intent intent = new Intent(this, MapsActivity.class);
                     startActivity(intent);
                 } else {
                     erro = true;
@@ -47,11 +47,7 @@ public class Login extends AppCompatActivity {
         if(erro)
             Toast.makeText(getApplicationContext(), "Credenciais incorretas.", Toast.LENGTH_LONG).show();
     }
-    public void proxima_Tela_(View view){
 
-        Intent intent = new Intent(this, tela_mapa.class);
-        startActivity(intent);
-    }
 
 
     public void proxima_Tela2_(View view){

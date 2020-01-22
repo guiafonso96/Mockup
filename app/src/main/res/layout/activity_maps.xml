@@ -4,27 +4,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MapsActivity"
+    tools:showIn="@layout/activity_maps"
     android:id="@+id/drawer_layout"
-    android:fitsSystemWindows="true"
-    tools:context=".tela_mapa"
     tools:openDrawer="start">
 
+    <include layout="@layout/toolbar" />
 
-    <LinearLayout
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:id="@+id/nav_host_fragment" />
 
-        <include layout="@layout/toolbar" />
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        android:layout_marginTop="60dp">
 
 
-        <FrameLayout
-            android:id="@+id/nav_host_fragment"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
-
-    </LinearLayout>
+    </fragment>
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/navigation"
@@ -37,6 +40,4 @@
         app:itemTextColor="#ffffff"
         app:menu="@menu/drawer_menu" />
 
-
 </androidx.drawerlayout.widget.DrawerLayout>
-

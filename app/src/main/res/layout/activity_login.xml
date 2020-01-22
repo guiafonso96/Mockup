@@ -17,11 +17,11 @@
         app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/senha"
+        app:layout_constraintStart_toEndOf="@+id/campoSenha"
         app:srcCompat="@drawable/logo" />
 
     <EditText
-        android:id="@+id/email"
+        android:id="@+id/campoEmail"
         android:layout_width="323dp"
         android:layout_height="57dp"
         android:layout_marginStart="15dp"
@@ -32,16 +32,17 @@
         android:ems="10"
         android:hint="  E-mail"
         android:inputType="textEmailAddress"
+        android:textColor="#FFFFFF"
         android:textColorHint="#FFFFFF"
         android:textSize="16sp"
         android:theme="@style/MyEditTextTheme"
-        app:layout_constraintBottom_toTopOf="@+id/senha"
+        app:layout_constraintBottom_toTopOf="@+id/campoSenha"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <EditText
-        android:id="@+id/senha"
+        android:id="@+id/campoSenha"
         android:layout_width="323dp"
         android:layout_height="46dp"
         android:layout_marginStart="15dp"
@@ -51,12 +52,13 @@
         android:ems="10"
         android:hint="  Senha"
         android:inputType="textPassword"
+        android:textColor="#FFFFFF"
         android:textColorHint="#FFFFFF"
         android:textSize="16sp"
         android:theme="@style/MyEditTextTheme"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email" />
+        app:layout_constraintTop_toBottomOf="@+id/campoEmail" />
 
     <Button
         android:id="@+id/button"
@@ -72,7 +74,7 @@
         android:typeface="serif"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/senha" />
+        app:layout_constraintTop_toBottomOf="@+id/campoSenha" />
 
     <Button
         android:id="@+id/entrar"
@@ -86,7 +88,7 @@
         android:drawableLeft="@drawable/login"
         android:drawablePadding="3dp"
 
-        android:onClick="proxima_Tela_"
+        android:onClick="login"
         android:paddingLeft="90dp"
         android:paddingRight="90dp"
 
