@@ -49,7 +49,6 @@
             android:name=".tela_menu"
             android:label="@string/title_activity_tela_menu"
             android:theme="@style/NoActionBar" />
-        <activity android:name=".tela_mapa" />
         <activity android:name=".Login" />
         <activity android:name=".cadastrar" />
         <activity android:name=".splash">
