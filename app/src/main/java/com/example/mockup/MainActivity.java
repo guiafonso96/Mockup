@@ -23,5 +23,10 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, Exercicio_Maps.class);
         startActivity(intent);
     }
+    public void tela_api(View view) {
+
+        Intent intent = new Intent(this, testeApi.class);
+        startActivity(intent);
+    }
 
 }
