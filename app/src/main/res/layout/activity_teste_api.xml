@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:padding="50dp"
     android:layout_width="match_parent"
-    tools:context="br.com.matheuscastiglioni.blog.requisicao_http.MainActivity">
+    tools:context=".testeApi">
 
     <EditText
         android:digits="0123456789"
@@ -25,15 +25,15 @@
         android:layout_width="match_parent">
 
         <Button
-            android:id="@+id/btnMain_buscarCep"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
             android:background="@color/colorPrimary"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnMain_buscarCep"
+            android:layout_marginBottom="10dp"
             android:padding="10dp"
             android:text="Buscar CEP"
             android:textColor="#FDFDFD"
-            android:textSize="22sp" />
+            android:textSize="22sp"
+            android:layout_width="wrap_content"/>
 
     </LinearLayout>
 
